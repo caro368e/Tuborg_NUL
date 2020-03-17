@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    /*WIll display whatever is the child of the navbar*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*sætter navbaren fast*/
+    position: sticky;
+    /*Bestemmer hvor Navbaren skal sidde*/
+    top: 0;
+    background: #4c78be;
+    color: #fff;
+    z-index: 1;
+    padding: 0.6em;
+    flex-wrap: wrap;
+}
+
+#navbar h1 {
+    padding-left: 1em;
+}
+
+#navbar ul {
+    /*Displays the child of the ul (the li)*/
+    display: flex;
+    /*Puts everything in the center (same level) in the flexbox*/
+    align-items: center;
+    /*removes bullets points*/
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0.75em;
+    margin: 0 0.25em;
+    letter-spacing: 0.2em;
+}
+
+#navbar ul li a:hover {
+    background: #73a7f8;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+
+/*-----------------------------SHOWCASE HEADER------------------------*/
+#showcase {
+    background-image: url(img/alcohol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2em;
+    color: #fff;
+
+    /*OVERLAY: we'll give the overlay a position of
+    absolute so we can make an overlay*/
+    position: absolute;
+    /*top has to be the exact amount of px of the menu for the background to cover completely*/
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
