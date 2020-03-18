@@ -2,26 +2,100 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+    background-color: #f5b348;
+    padding: 0.4em;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+/*----------------------Mobile first-------------*/
+
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .nav_links {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .nav_links {
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: -4vh;
+        background-color: #f5b348;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        transform: translateY(-180%);
+    }
+
+    .nav_links li {
+        padding-top: 0;
+        margin: 0;
+        margin: 2em;
+        font-size: 1.3em;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+
 #navbar {
     /*WIll display whatever is the child of the navbar*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /*sætter navbaren fast*/
     position: sticky;
     /*Bestemmer hvor Navbaren skal sidde*/
     top: 0;
-    background: #4c78be;
+    background: #f5b348;
     color: #fff;
     z-index: 1;
     padding: 0.6em;
     flex-wrap: wrap;
+
+
 }
 
 #navbar h1 {
@@ -42,12 +116,7 @@ html {
     padding: 0.75em;
     margin: 0 0.25em;
     letter-spacing: 0.2em;
-}
-
-#navbar ul li a:hover {
-    background: #73a7f8;
-    border-radius: 2px;
-    transition: 0.5s;
+    font-family: 'Roboto Slab', serif;
 }
 
 
@@ -57,7 +126,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 92vh;
+    height: 95vh;
 }
 
 #showcase .showcase-content {
@@ -79,4 +148,112 @@ html {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+
+    font-size: 2em;
+}
+
+
+
+/*------------------------OM PRODUKTET------------------*/
+
+#om_tuborg_nul {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 7em;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#om_tuborg_nul .col h2 {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    text-align: center;
+}
+
+#om_tuborg_nul .col .txt {
+    margin: 1.3em;
+    margin-top: 3em;
+    line-height: 2em;
+}
+
+
+
+#om_tuborg_nul img {
+    margin: auto;
+    width: 200px;
+    margin-top: 4em;
+
+}
+
+
+/*-----------------------Spillet--------------------*/
+
+#spil {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 7em;
+}
+
+.spil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#spil .col h2 {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    text-align: center;
+}
+
+#spil .col .txt {
+    margin: 1.3em;
+    margin-top: 3em;
+    line-height: 2em;
+}
+
+
+#spil img {
+    margin: auto;
+    width: 300px;
+    margin-top: 4em;
+}
+
+#spil .spil_knap {
+    display: flex;
+    justify-content: center;
+}
+
+#spil .spil_knap a {
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+
+/*------------------Animationer-------------------*/
+
+.drop {
+    animation-name: drop_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes drop_kf {
+    from {
+        transform: translateY(-130vw);
+    }
+
+    to {
+        transform: translateY(2vw);
+    }
 }
