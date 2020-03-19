@@ -14,12 +14,25 @@ a {
     color: #fff;
 }
 
+a:hover {
+    color: #3d71ff;
+    transition: 0.3s;
+}
+
 .btn {
-    background-color: #f5b348;
+    background-color: #3d71ff;
     padding: 0.4em;
     border-radius: 5px;
     margin-top: 2em;
+    margin: 1em;
 }
+
+.btn:hover {
+    background-color: #3d71ff;
+    color: #fff;
+}
+
+#footer {}
 
 /*----------------------Mobile first-------------*/
 
@@ -36,66 +49,32 @@ a {
     cursor: pointer;
 }
 
-@media screen and (max-width:1024px) {
-    .nav_links {
-        width: 60%;
-    }
+.nav_links li {
+    padding-top: 0;
+    margin: 0;
+    margin: 1em;
+    font-size: 1.3em;
 }
 
-
-@media screen and (max-width:768px) {
-
-    html {
-        overflow-x: hidden;
-    }
-
-    .nav_links {
-        position: absolute;
-        right: 0px;
-        height: 60vh;
-        top: -4vh;
-        background-color: #f5b348;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-        transform: translateY(-180%);
-    }
-
-    .nav_links li {
-        padding-top: 0;
-        margin: 0;
-        margin: 2em;
-        font-size: 1.3em;
-    }
-
-    .burger {
-        display: block;
-    }
+.burger {
+    display: block;
+}
 }
 
 .nav-active {
     transform: translateY(0%);
 }
 
-
 #navbar {
-    /*WIll display whatever is the child of the navbar*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*sætter navbaren fast*/
     position: sticky;
-    /*Bestemmer hvor Navbaren skal sidde*/
     top: 0;
     background: #f5b348;
     color: #fff;
     z-index: 1;
-    padding: 0.6em;
-    flex-wrap: wrap;
-
-
+    padding: 0.5em;
 }
 
 #navbar h1 {
@@ -120,7 +99,7 @@ a {
 }
 
 
-/*-----------------------------SHOWCASE HEADER------------------------*/
+/*--------------------SHOWCASE HEADER------------------*/
 #showcase {
     background-image: url(img/alcohol.jpg);
     background-repeat: no-repeat;
@@ -148,7 +127,6 @@ a {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-
     font-size: 2em;
 }
 
@@ -156,11 +134,7 @@ a {
 
 /*------------------------OM PRODUKTET------------------*/
 
-#om_tuborg_nul {
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 7em;
-}
+
 
 .sectionwrapper {
     display: flex;
@@ -194,11 +168,7 @@ a {
 
 /*-----------------------Spillet--------------------*/
 
-#spil {
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 7em;
-}
+
 
 .spil {
     display: flex;
@@ -238,22 +208,159 @@ a {
 }
 
 
-/*------------------Animationer-------------------*/
+/*---------------MEDIA queries----------------*/
 
-.drop {
-    animation-name: drop_kf;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-}
+@media screen and (min-width:600px) {
 
-@keyframes drop_kf {
-    from {
-        transform: translateY(-130vw);
+    .burger {
+        display: none;
     }
 
-    to {
-        transform: translateY(2vw);
+    #navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: #f5b348;
+        color: #fff;
+        z-index: 1;
+        padding: 0.5em;
+    }
+
+    .nav_links li {
+        margin: 0;
+    }
+
+    #navbar ul li a:hover {
+        color: #3d71ff;
+        transition: 0.3s;
+    }
+
+    #showcase {
+        height: 96vh;
+    }
+
+
+
+    #om_tuborg_nul {
+        max-width: 2000px;
+        margin-bottom: 7em;
+        margin: auto;
+    }
+
+    #om_tuborg_nul .sectionwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #om_tuborg_nul .col {
+        flex-basis: 700px;
+        margin: 0.5em;
+        margin-bottom: 3em;
+    }
+
+    #om_tuborg_nul .col .txt {
+        margin-top: 3em;
+        line-height: 2em;
+        font-size: 1.6em;
+
+    }
+
+    #om_tuborg_nul img {
+        width: 400px;
+        margin-top: 13em;
+
+    }
+
+
+    #spil {
+        margin-bottom: 7em;
+        margin: auto;
+        background-color: #f5b348;
+        color: #fff;
+    }
+
+    #spil .sectionwrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #spil .col {
+        flex-basis: 700px;
+        margin-right: 10em;
+        margin-bottom: 3em;
+    }
+
+    #spil .col .txt {
+        margin-top: 3em;
+        line-height: 2em;
+        font-size: 1.6em;
+
+    }
+
+    #spil img {
+        width: 600px;
+        margin-top: 25em;
+
+    }
+
+    #spil .spil_knap a {
+        font-size: 2.5em;
     }
 }
+
+
+
+@media screen and (max-width:1024px) {
+    .nav_links {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .nav_links {
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: -4vh;
+        background-color: #f5b348;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        transform: translateY(-180%);
+    }
+
+
+
+
+    /*------------------Animationer-------------------*/
+
+    .drop {
+        animation-name: drop_kf;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+
+    @keyframes drop_kf {
+        from {
+            transform: translateY(-130vw);
+        }
+
+        to {
+            transform: translateY(2vw);
+        }
+    }
