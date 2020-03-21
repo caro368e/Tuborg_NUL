@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -124,11 +124,11 @@ a:hover {
 
 /*--------------------SHOWCASE HEADER------------------*/
 #showcase {
-    background-image: url(img/alcohol.jpg);
+    background-image: url(img/picnic_bjerge.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    height: 93vh;
 }
 
 #showcase .showcase-content {
@@ -140,17 +140,7 @@ a:hover {
     height: 100%;
     padding: 0 2em;
     color: #fff;
-
-    /*OVERLAY: we'll give the overlay a position of
-    absolute so we can make an overlay*/
-    position: absolute;
-    /*top has to be the exact amount of px of the menu for the background to cover completely*/
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 
@@ -198,6 +188,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     background-color: #f5b348;
+    color: #fff;
 }
 
 #spil .col h2 {
@@ -233,7 +224,7 @@ a:hover {
 
 /*---------------MEDIA queries----------------*/
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:700px) {
 
     .burger {
         display: none;
@@ -257,12 +248,9 @@ a:hover {
     }
 
     #navbar .logo {
-        width: 100px;
+        width: 150px;
     }
 
-    .nav_links li {
-        margin: 0;
-    }
 
     #navbar ul li a:hover {
         color: #3d71ff;
@@ -270,9 +258,21 @@ a:hover {
     }
 
     #showcase {
-        height: 92vh;
+        background-image: url(img/picnic_bjerge.png);
+        height: 94vh;
     }
 
+    #showcase .showcase-content {
+        height: 100%;
+        padding: 0 2em;
+        color: #fff;
+        font-size: 4em;
+    }
+
+    #showcase .btn {
+        font-size: 0.6em;
+        padding: 0.5em;
+    }
 
 
     #om_tuborg_nul {
@@ -301,7 +301,7 @@ a:hover {
     }
 
     #om_tuborg_nul img {
-        width: 400px;
+        width: 200px;
         margin-top: 13em;
 
     }
@@ -366,6 +366,10 @@ a:hover {
 
     #footer ul li {
         padding: 0.2em;
+    }
+
+    #footer .info {
+        display: contents;
     }
 }
 
