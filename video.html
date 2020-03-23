@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuborg NUL</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div>
+      <a href="#showcase">
+        <img src="img/tuborg_logo.svg" alt="tuborg logo">
+      </a>
+    </div>
+    <ul class="nav_links">
+      <li><a href="index.html">FORSIDE</a></li>
+      <li><a href="index.html#om">OM</a></li>
+      <li><a href="index.html#spil">SPIL</a></li>
+    </ul>
+
+    <!-- Skal bruges til BurgerMenu-->
+    <div id="burger">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
+      <div id="line4"></div>
+    </div>
+  </nav>
+
+  <div class="besked">Her kommer der video, når vi når dertil.</div>
+  <div class="synopsis">
+    <h2>Præmis/Budskab/Pay-off:</h2>
+    <p>Budskab: Du er stadig en del af fællesskabet, selvom du ikke drikker alkohol</p>
+    <p>Pay-off: Tuborg NUL – Så alle kan være med</p>
+    <h2>Log-line:</h2>
+    <p>Redegør I to sætninger: filmens karakter(er) og dennes ‘projekt’ og evt. modstand.</p>
+    <p>Alkoholfri øl er et samlingspunkt for mennesker, om du er til koncert, strandfest, privatfest eller derhjemme.</p>
+    <h2>Koncept:</h2>
+    <p>Et kort beskrivelse af koncept ide / tema, og visual bærende idé.– Max. 10 sætninger.</p>
+    <p>Filmen skal handle om, at selvom man ikke drikker alkohol, kan man stadig føle sig som en del af fællesskabet. Med Tuborg NUL kan man nyde smagen af øl uden at blive påvirket. Filmen skal portrættere hygge, stemning og fællesskab, men på en diskret måde. Produktet skal være i fokus og baggrunden med folk, der sætter sig ned ved hinanden, skal være sløret. Scenerne skal foregå på en strand (dåse i sandet forrest i billedet), derhjemme i sofaen (dåse på sofabordet) og på vej i byen (dåse på asfalten/ved murstenshus). Nærbilleder af dåserne i en af siderne med slørede mennesker i baggrunden. </p>
+    <p>Til slut "Tuborg NUL – så kan alle være med" i centrum, mens filmen fader ud i sort.</p>
+    <h2>Step outline / Dramaturgi:</h2>
+    <h3>Step outline (kort scene gennemgang):</h3>
+    <p>En kort beskrivelse af filmen dramatiske elementer og progression (evt. akter)</p>
+    <p>Redegørkort for filmens opbygning f.eks Hook, vendepunkter, klimaks.</p>
+
+    <p>Beskrivelse skal gengives ift. det som beskueren konkret vil se i filmen...</p>
+
+    <p>Scenes 1:<br>
+      · Der fades op fra sort, lyden af havet<br>
+      · Lyskæder i sandet giver hyggelig belysning, Tuborg NUL-dåsen står i højre side (close up)<br>
+      · Der sidder 2 mennesker i baggrunden i sandet, en tredje går fordi dåsen og tager den med sig ned til de andre. Sløret baggrund. Personer med ryggen/siden til.<br>
+      · Baggrund fader ud i sort</p>
+    <p>Scene 2:<br>
+      · Der fades op fra sort, lyden af TV<br>
+      · Lys tændt på sofabordet, sofa i baggrunden med en person i (sløret) (skåret fra halsen)<br>
+      · Close up på Tuborg NUL-dåse på sofabordet ved en skål chips<br>
+      · Person nr 2 sætter sig i sofaen, tager en tår af dåsen og sætter den på bordet igen<br>
+      · Der fades ud til sort</p>
+    <p>Scene 3:<br>
+      · Der fades op fra sort<br>
+      · Lyden af biler/byliv under en gadelampe<br>
+      · 2 personer med siden til i baggrunden venter på den tredje (sløret)<br>
+      · Den tredje person sætter en Tuborg NUL dåse fra sig på et kabelskab og går ned til de andre</p>
+    <p>Scene 4:<br>
+      · Billedet fader ud i sort<br>
+      · Pay-off vises i grafisk gengivelse ”Tuborg NUL – så kan alle være med”.</p>
+
+    <h2>Call-to-action:</h2>
+    <p>Redegør for jeres call-to-action: hvad består den af? Hvordan fungerer den?</p>
+
+    <p>Køb Tuborg NUL hvis du elsker smagen af øl, men gerne vil drikke noget uden alkohol. Den skaber stadig følelsen af hygge og fællesskab. </p>
+  </div>
+
+  <footer id="footer">
+    <div>
+      <p>Gruppe 7 | Caroline Jensen | Luna Baunskjær | Nikoline Elbæk | Selina Parbst</p>
+    </div>
+  </footer>
+
+
+  <script>
+    window.addEventListener("load", navShow);
+
+    function navShow() {
+      console.log("navShow");
+      document.querySelector("#burger").addEventListener("click", burgerClick);
+    }
+
+    function burgerClick() {
+      console.log("burgerClick");
+      document.querySelector("#burger").classList.toggle("open");
+      document.querySelector(".nav_links").classList.toggle("drop");
+      document.querySelector(".nav_links").addEventListener("click", burgerLuk);
+    }
+
+    function burgerLuk() {
+      document.querySelector("#burger").classList.toggle("open");
+      document.querySelector(".nav_links").classList.toggle("drop");
+    }
+
+  </script>
+</body>
+
+</html>
