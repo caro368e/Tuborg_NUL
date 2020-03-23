@@ -325,7 +325,7 @@ a:hover {
   left: 30px;
   height: 30px;
   width: 90px;
-  background-color: #ffa6bf;
+  background-color: #00234e;
   color: #fff;
   text-align: center;
   line-height: 30px;
@@ -684,7 +684,7 @@ a:hover {
 }
 
 .svar {
-  background-color: #ffa6bf;
+  background-color: #00234e;
   position: absolute;
   top: 100px;
   left: 20px;
@@ -696,7 +696,7 @@ a:hover {
 }
 
 .instruks {
-  background-color: #ffa6bf;
+  background-color: #00234e;
   position: absolute;
   top: 100px;
   left: 20px;
@@ -851,6 +851,7 @@ a:hover {
   }
 
 
+
   /*---------------Showcase---------------*/
 
   #showcase {
@@ -952,11 +953,6 @@ a:hover {
   #spil .col .txt {
     line-height: 2em;
     font-size: 1.4em;
-  }
-
-  .pink {
-    background-color: #ffa6bf;
-    width: 100%
   }
 
   #spil img {
@@ -1108,6 +1104,5 @@ a:hover {
     left: 100px;
     right: 100px;
   }
-
 
 }

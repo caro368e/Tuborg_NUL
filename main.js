@@ -84,6 +84,22 @@ function begynd() {
   spil();
 }
 
+var clickHandlerBad = function badClick() {
+
+  document.querySelector("#ord_bad_c" + random).classList.add("hide");
+  document.querySelector("#bad_svar_" + random).classList.remove("hide");
+  liv--;
+  document.querySelector("#liv" + liv).classList.add("dead");
+}
+
+var clickHandlerGod = function godClick() {
+
+  document.querySelector("#ord_god_c" + random).classList.removeAll
+  document.querySelector("#ord_god_c" + random).classList.add("valgt");
+  points++;
+  document.querySelector("#point").innerHTML = points + "/12";
+}
+
 function spil() {
 
   random = Math.floor(Math.random() * 20) + 1;
@@ -102,24 +118,19 @@ function spil() {
       document.querySelector("#ord_bad_c" + random).classList.remove("hide");
       document.querySelector("#ord_bad_c" + random).classList.add("fade");
 
-      document.querySelector("#ord_bad_c" + random).addEventListener("click", () => {
-
-        document.querySelector("#ord_bad_c" + random).classList.add("hide");
-        document.querySelector("#bad_svar_" + random).classList.remove("hide");
-        liv--;
-        document.querySelector("#liv" + liv).classList.add("dead");
-      });
+      document.querySelector("#ord_bad_c" + random).addEventListener("click", clickHandlerBad);
 
       window.setTimeout(() => {
         document.querySelector("#ord_bad_c" + random).classList.removeAll;
         document.querySelector("#ord_bad_c" + random).classList.add("hide");
         document.querySelector("#bad_svar_" + random).classList.add("hide");
+        document.querySelector("#ord_bad_c" + random).removeEventListener("click", clickHandlerBad);
         if (liv <= 0) {
           slutSpil();
         } else {
           spil();
         }
-      }, 4000);
+      }, 5500);
     }
     if (random <= 12) {
       console.log("Godt ord");
@@ -127,25 +138,20 @@ function spil() {
       document.querySelector("#ord_god_c" + random).classList.remove("hide");
       document.querySelector("#ord_god_c" + random).classList.add("fade");
 
-      document.querySelector("#ord_god_c" + random).addEventListener("click", () => {
-
-        document.querySelector("#ord_god_c" + random).classList.removeAll
-        document.querySelector("#ord_god_c" + random).classList.add("valgt");
-        points++;
-        document.querySelector("#point").innerHTML = points + "/12";
-      });
+      document.querySelector("#ord_god_c" + random).addEventListener("click", clickHandlerGod);
 
       window.setTimeout(() => {
         document.querySelector("#ord_god_c" + random).classList.removeAll;
         document.querySelector("#ord_god_c" + random).classList.add("hide");
         document.querySelector("#ord_god_c" + random).classList.remove("valgt");
         document.querySelector("#ord_god_c" + random).classList.add("pos" + random);
+        document.querySelector("#ord_god_c" + random).removeEventListener("click", clickHandlerGod);
         if (points >= 12) {
           slutSpil();
         } else {
           spil();
         }
-      }, 6000);
+      }, 2500);
 
     }
   }

@@ -1,0 +1,3 @@
+[0323/183844.434:ERROR:process_reader_win.cc(151)] SuspendThread: Adgang nægtet. (0x5)
+[0323/183844.437:ERROR:exception_snapshot_win.cc(98)] thread ID 3896 not found in process
+[0323/183844.438:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Der blev foretaget et forsøg på at få adgang til en eksisterende proces. (0xc000010a)
